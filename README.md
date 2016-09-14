@@ -1,7 +1,7 @@
-# packaged jspm-incremental-bundler
+# packaged dts-package
 
 This repo is for distribution on `npm` and `jspm`. The source for this module is in the
-[main repo](https://github.com/zhouhoujun//jspm-incremental-bundler/src/mastert).
+[main repo](https://github.com/zhouhoujun//dts-package/src/mastert).
 Please file issues and pull requests against that repo.
 
 ## Install
@@ -12,39 +12,42 @@ You can install this package either with `npm` or with `jspm`.
 
 ```shell
 dependencies: {
-  "jspm-incremental-bundler": "https://github.com/zhouhoujun/jspm-incremental-bundler.git#commit-ish"
+  "dts-package": "https://github.com/zhouhoujun/dts-package.git#commit-ish"
 }
 npm install
 ```
 
-You can `import` ngMock modules:
-
+### compile jspm package module example
 ```js
+import  { tsReference, dtsPackage } from 'dts-package';
 
-import  { JSPMBuilder } from 'jspm-incremental-bundler';
+let tsResult = gulp.src('src')
+  //...
+  .pipe(tsReference('./typings/index.d.ts'))
+  .pipe(ts({...}));
 
-builder = new JSPMBuilder(options);
-//bundle all ,setting in options.
-builder.bundle();
-//only bundle group1, setting in options .
-builder.bundle('group1');
-//bundle 'group1','group2','group2', setting in options .
-builder.bundle(['group1','group2','group2'])
+return merge([
+        // Merge the two output streams, so this task is finished when the IO of both operations are done. 
+        tsResult.dts
+          .pipe(dtsPackage(
+             //packageName
+            'jspm_package_name',
+            //main file name,
+            'app',
+            //sourceRoot,
+            //''
+          ))
+          .pipe(gulp.dest('dest')),
 
+        tsResult.js.pipe(gulp.dest('dest'))
+    ]);
 ```
 
-### jspm
-
-```shell
-jspm install github:zhouhoujun/jspm-incremental-bundler
-```
-https://github.com/zhouhoujun//jspm-incremental-bundler.git
-The mocks are then available at `jspm_components/jspm-incremental-bundler/jspm-incremental-bundler.js`.
 
 ## Documentation
 
 Documentation is available on the
-[jspm-incremental-bundler docs site](https://github.com/zhouhoujun//jspm-incremental-bundler).
+[dts-package docs site](https://github.com/zhouhoujun/dts-package).
 
 ## License
 
