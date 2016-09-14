@@ -1,8 +1,11 @@
 # packaged dts-package
 
-This repo is for distribution on `npm` and `jspm`. The source for this module is in the
-[main repo](https://github.com/zhouhoujun//dts-package/src/mastert).
+This repo is for distribution on `npm`. The source for this module is in the
+[main repo](https://github.com/zhouhoujun/dts-package/src/mastert).
 Please file issues and pull requests against that repo.
+
+This package use to help typescript compile with dts.
+can publish dts with package module name.
 
 ## Install
 
