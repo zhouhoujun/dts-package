@@ -56,7 +56,7 @@ Documentation is available on the
 
 The MIT License
 
-Copyright (c) 2010-2015 Google, Inc. http://www.skspruce.com
+Copyright (c) 2010-2015 Google, Inc. https://github.com/zhouhoujun
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
