@@ -1,0 +1,13 @@
+{
+  "name": "dts-package",
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.3.4+20160515010139",
+    "debug": "registry:npm/debug#2.0.0+20160511151334",
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958",
+    "gulp": "registry:npm/gulp#3.8.0+20160211003958",
+    "through2": "registry:npm/through2#2.0.0+20160308004148"
+  },
+  "globalDependencies": {
+    "node": "registry:dt/node#6.0.0+20160619064643"
+  }
+}

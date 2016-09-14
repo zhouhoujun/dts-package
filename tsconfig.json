@@ -1,0 +1,20 @@
+{
+  "name": "dts-package",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "lib",
+    "node_modules"    
+  ]
+}
